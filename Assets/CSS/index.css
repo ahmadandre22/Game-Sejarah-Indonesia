@@ -1,0 +1,252 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #ff0000, #ffffff); /* Red to White gradient */
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff0000, #ffffff); /* Red to White gradient */
+    color: #fff;
+    opacity: 0;
+    animation: slideInDown 1s forwards;
+}
+
+.left-logos,
+.right-logo {
+    display: flex;
+    align-items: center;
+}
+
+.left-logos img {
+    margin-right: 10px; /* Add margin to separate logos */
+}
+
+.right-logo {
+    display: flex;
+    align-items: center;
+}
+
+.right-logo img {
+    margin-left: 15px; /* Add margin left to separate logos */
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.game-image {
+    width: 100px; /* Increased size */
+    height: 100px; /* Increased size */
+    border-radius: 15%;
+    transition: transform 0.3s ease;
+}
+
+.game-image:hover {
+    transform: scale(1.1);
+}
+
+.logo {
+    width: 70px; /* Increased size */
+    height: 70px; /* Increased size */
+}
+
+.logo-game {
+    width: 70px; /* Increased size */
+    height: 70px; /* Increased size */
+    border-radius: 50%;
+}
+
+.rotating-image {
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    background: #ffffff; /* White background for content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes textSlideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animated-text {
+    animation: textSlideIn 1s forwards;
+}
+
+.animated-text:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.animated-text:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.animated-text:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.animated-text:nth-child(4) {
+    animation-delay: 2s;
+}
+
+.content h1 {
+    color: #ff0000; /* Red color */
+}
+
+.content p {
+    color: #333;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff0000; /* Red button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+    transform: scale(1.05);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff0000, #ffffff); /* Red to White gradient */
+    color: #fff;
+    position: relative;
+    opacity: 0;
+    animation: slideInUp 1s forwards;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-center {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-center button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #cc0000; /* Darker red button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-center button:hover {
+    background-color: #990000; /* Even darker red on hover */
+}
+
+.footer-right {
+    text-align: right;
+    color: #000;
+}
+
+.footer-right p {
+    margin: 0;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media a {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover {
+    transform: scale(1.1);
+}
+
+.social-logo {
+    width: 50px; /* Increased size */
+    height: 50px; /* Increased size */
+    border-radius: 50%;
+}
